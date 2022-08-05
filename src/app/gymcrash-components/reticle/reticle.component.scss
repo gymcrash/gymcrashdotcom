@@ -1,0 +1,58 @@
+@import "../styles/colors.scss";
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.reticule {
+    align-items: center;
+    color: rgba($lightGreen, 0.3);
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.main {
+    align-items: center;
+    animation: spin 3s linear 0s infinite alternate;
+    border: 4px dashed rgba($green, 0.1);
+    border-radius: 150px;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    width: 150px;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(359deg);
+    }
+}
+
+.innerMain {
+    align-items: center;
+    animation: spin 2s ease-in-out 0s infinite forwards;
+    display: flex;
+    border: 2px dashed rgba($lightGreen, 0.3);
+    border-radius: 100px;
+    height: 80px;
+    justify-content: center;
+    width: 80px;
+}
+
+.coordinates {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+}
