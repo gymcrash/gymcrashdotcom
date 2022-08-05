@@ -1,0 +1,40 @@
+@import "../styles/colors.scss";
+
+
+@keyframes scroll {
+    0% {left: -50%;}
+    100% {left: 100%;}
+}
+
+
+
+:host {
+    background-color: rgba($color: $orange, $alpha: 0.3);
+    border: 1px solid rgba($color: $orange, $alpha: 1.0);
+    border-width: 1px 0;
+    color: $orange;
+    display: block;
+    justify-content: flex-start;
+    font-size: small;
+    max-height: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.text1 {
+    animation: scroll 5s linear 0s infinite forwards;
+
+}
+
+.text2 {
+    animation: scroll 5s linear 2.5s infinite forwards;
+}
+
+span {
+
+    display: block;
+    left: -100%;
+    position:absolute;
+}

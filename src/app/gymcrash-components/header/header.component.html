@@ -1,0 +1,9 @@
+<div class="container">
+    <gym-marquee text="&gt;&gt;&gt;&gt; {{getMouseXPos()}} - {{getMouseYPos()}} - {{getMouseTarget()}} &lt;&lt;&lt;&lt;" [time]="10"></gym-marquee>
+    <div class="grid">
+        <h1>
+            <span class="content"><ng-content></ng-content></span>
+        </h1>
+    </div>
+    <gym-marquee text="generated time completed at: {{getCurrentDateTime()}} -- independently crafted design and code "></gym-marquee>
+</div>

@@ -1,0 +1,36 @@
+@import "../styles/colors.scss";
+
+:host {
+    display: block;
+    perspective: 100px;
+    padding: 1em;
+}
+
+@keyframes autoExpand {
+    0% {transform: scale(100%, 0%) rotateX(45deg);}
+    50% {transform: scale(100%, 30%) rotateX(45deg);}
+    100% {transform: scale(100%, 100%) rotateX(4deg);}
+}
+
+div {
+    border: 1px solid rgba($color: $green, $alpha: 0.5);
+    border-top-width: 4px;
+    border-radius: 4px;
+    color: $white;
+    padding: 1em;
+
+    
+    animation-name: autoExpand;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+
+    transform: scale(100%) rotateX(1deg);
+    transition: transform 200ms ease-out;
+
+    &:hover {
+        transform: scale(101%);
+        border-color: $lightGreen;
+    }
+}
+

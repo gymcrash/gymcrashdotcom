@@ -1,0 +1,59 @@
+@import "../styles/font-mixins.scss";
+@import "../styles/colors.scss";
+
+:host {
+    display: block;
+    margin-bottom: 3em;
+    padding:1em 0;
+    perspective: 100px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(103%);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        padding-left: 0%;
+    }
+    100% {
+        padding-left: 100%;
+    }
+}
+
+.container {
+    transform: rotateZ(5deg);
+}
+
+h1 {
+    @include impactfulFont;
+    animation: pulse 0.5s ease-in-out 0s infinite alternate;
+    display: flex;
+    font-size: 3em;
+    justify-content:center;
+    text-align: center;
+}
+
+@keyframes scrollGrid {
+    0% {
+        background-position: 0 120px;
+    }
+
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+.grid {
+    animation: scrollGrid 2s linear 0s infinite forwards;
+    background-image: repeating-linear-gradient(90deg, rgba(5, 194, 5, 0.5) 1px, transparent 2px, transparent 10px), 
+                        repeating-linear-gradient( rgba(5, 194, 5, 0.5) 1px, transparent 2px, transparent 10px);
+ 
+    width: 100%;
+}
+

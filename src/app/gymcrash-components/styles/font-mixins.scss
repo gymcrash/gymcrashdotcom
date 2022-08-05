@@ -1,0 +1,16 @@
+@import "./colors.scss";
+
+@mixin barcodeFont {
+    font-family: "Libre Barcode 39 Text", monospace;
+}
+
+@mixin impactfulFont {
+    font-weight: normal;
+    font-family: "Saira Stencil One", sans-serif;
+    text-shadow: 0px 0px 10px $white;
+    
+}
+
+@mixin eyecatchingFont {
+    font-family: "Gugi", monospace;
+}
