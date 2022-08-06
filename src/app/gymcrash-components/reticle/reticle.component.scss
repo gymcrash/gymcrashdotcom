@@ -3,6 +3,7 @@
 .container {
     height: 100vh;
     width: 100%;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -11,7 +12,7 @@
 
 .reticule {
     align-items: center;
-    color: rgba($lightGreen, 0.3);
+    color: rgba($green, 0.1);
     display: flex;
     justify-content: center;
     left: 50%;
@@ -44,15 +45,38 @@
     align-items: center;
     animation: spin 2s ease-in-out 0s infinite forwards;
     display: flex;
-    border: 2px dashed rgba($lightGreen, 0.3);
+    border: 2px dashed rgba($green, 0.3);
     border-radius: 100px;
     height: 80px;
     justify-content: center;
     width: 80px;
 }
 
+@keyframes fadeText {
+    0% {opacity: 0.3;}
+    100% { opacity: 0.1; }
+    
+}
+
 .coordinates {
+    animation: fadeText 1s ease 0s infinite alternate;
     position: absolute;
     bottom: -10%;
     right: -10%;
+}
+
+.verticalRulerLeft, .verticalRulerRight {
+    background-image: repeating-linear-gradient(rgba($green, 0.3) 1px, transparent 2px, transparent 19px, transparent 20px);
+    border-left: 1px dotted rgba(80, 177, 0, 0.3);
+    height: 100vh;
+    left: 1em;
+    position: absolute;
+    width: 16px;
+}
+
+.verticalRulerRight {
+    border-left: unset;
+    border-right: 1px dotted rgba(80, 177, 0, 0.3);
+    left: unset;
+    right: 1em;
 }

@@ -1,8 +1,10 @@
 <div class="container">
     <div class="reticule" [style]="getPositionStyle(150)">
         <div class="main" >
-            <div class="innerMain">{{hasTarget ? 'target' : 'aquire'}}</div>
+            <div class="innerMain">+</div>
         </div>
         <div class="coordinates">{{x}},{{y}}</div>
     </div>
+    <div class="verticalRulerLeft" [style]="getVerticalRulerStyle()"></div>
+    <div class="verticalRulerRight" [style]="getVerticalRulerStyle()"></div>
 </div>

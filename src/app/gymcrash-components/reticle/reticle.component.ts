@@ -28,4 +28,8 @@ export class ReticleComponent implements OnInit {
     return `top: ${this.y-diameter/2}px; left: ${this.x-diameter/2}px;`;
   }
 
+  getVerticalRulerStyle() :string {
+    return `background-position: 0 ${this.y}px`;
+  }
+
 }
