@@ -66,8 +66,8 @@
 }
 
 .verticalRulerLeft, .verticalRulerRight {
-    background-image: repeating-linear-gradient(rgba($green, 0.3) 1px, transparent 2px, transparent 19px, transparent 20px);
-    border-left: 1px dotted rgba(80, 177, 0, 0.3);
+    background-image: repeating-linear-gradient(rgba($green, 0.5) 1px, transparent 2px, transparent 19px, transparent 20px);
+    border-left: 1px dotted rgba(80, 177, 0, 0.5);
     height: 100vh;
     left: 1em;
     position: absolute;

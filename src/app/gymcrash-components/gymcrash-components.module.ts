@@ -5,6 +5,9 @@ import { ConsoleTextComponent } from './console-text/console-text.component';
 import { HeaderComponent } from './header/header.component';
 import { MarqueeComponent } from './marquee/marquee.component';
 import { ReticleComponent } from './reticle/reticle.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuItemComponent } from './nav-menu-item/nav-menu-item.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,17 +17,22 @@ import { ReticleComponent } from './reticle/reticle.component';
     ConsoleTextComponent,
     HeaderComponent,
     MarqueeComponent,
-    ReticleComponent
+    ReticleComponent,
+    NavMenuComponent,
+    NavMenuItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     PanelComponent,
     ConsoleTextComponent,
     HeaderComponent,
     MarqueeComponent,
-    ReticleComponent
+    ReticleComponent,
+    NavMenuComponent,
+    NavMenuItemComponent
   ]
 })
 export class GymcrashComponentsModule { }

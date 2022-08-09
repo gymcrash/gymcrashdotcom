@@ -1,0 +1,23 @@
+@import "../styles/font-mixins.scss";
+
+a {
+    @include barcodeFont;
+    background-color: $background;
+    border: 1px solid $orange;
+    border-radius: 4px;
+    color: $orange;
+    display: inline-block;
+    font-size: 4em;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 0.05em;
+
+    transition: transform 0.125s ease-in;
+    
+    &:hover {
+        background-color: $orange;
+        border-color: $background;
+        color: $background;
+        transform: scale(120%, 110%) rotateX(0deg);
+    }
+}
