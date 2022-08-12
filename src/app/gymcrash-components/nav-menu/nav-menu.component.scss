@@ -22,15 +22,42 @@ nav {
     }
 }
 
-.starter {
+.starter, .starter2, .starter3, .starter4 {
     animation: pulseStarter 0.75s linear 0s infinite forwards;
     outline: 4px double $orange;
-    border-radius: 200px;
+    border-radius: 400px;
     position: absolute;
     top: calc(50% - 1.3em);
     left: 1em;
     height: 3em;
     width: 3em;
+}
+
+.starter2 {
+    animation: pulseStarter 0.75s linear 0s infinite alternate;
+    outline: 6px solid rgba($orange,0.2);
+    top: calc(50% - 2.8em);
+    left: -0.5em;
+    height: 6em;
+    width: 6em;
+}
+
+.starter3 {
+    animation: pulseStarter 0.75s linear 0s infinite alternate;
+    outline: 6px solid rgba($orange,0.1);
+    top: calc(50% - 4.8em);
+    left: -2.5em;
+    height: 10em;
+    width: 10em;
+}
+
+.starter4 {
+    animation: pulseStarter 0.75s ease-in 0s infinite alternate;
+    outline: 6px solid rgba($orange,0.1);
+    top: calc(50% - 6.8em);
+    left: -4.5em;
+    height: 14em;
+    width: 14em;
 }
 
 @keyframes scrollArrows {
@@ -44,7 +71,7 @@ nav {
 }
 
 .topLine, .bottomLine {
-    animation: scrollArrows 5s linear 0s infinite ;
+    animation: scrollArrows 3.75s linear 0s infinite ;
     background-image: repeating-linear-gradient(45deg, rgba($orange, 0.3), rgba($orange, 0.3) 10px, transparent 11px, transparent 20px);
     height: 0.5em;
     position: absolute;

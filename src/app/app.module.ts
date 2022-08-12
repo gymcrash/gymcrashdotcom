@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GymcrashComponentsModule } from './gymcrash-components/gymcrash-components.module';
+import { GymcrashsiteModule } from './gymcrashsite/gymcrashsite.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { GymcrashComponentsModule } from './gymcrash-components/gymcrash-compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GymcrashComponentsModule
+    GymcrashComponentsModule,
+    GymcrashsiteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
