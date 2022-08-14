@@ -8,6 +8,8 @@ import { ReticleComponent } from './reticle/reticle.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { NavMenuItemComponent } from './nav-menu-item/nav-menu-item.component';
 import { RouterModule } from '@angular/router';
+import { LoadingPanelComponent } from './loading-panel/loading-panel.component';
+import { RouterPanelComponent } from './router-panel/router-panel.component';
 
 
 
@@ -19,7 +21,9 @@ import { RouterModule } from '@angular/router';
     MarqueeComponent,
     ReticleComponent,
     NavMenuComponent,
-    NavMenuItemComponent
+    NavMenuItemComponent,
+    LoadingPanelComponent,
+    RouterPanelComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +36,9 @@ import { RouterModule } from '@angular/router';
     MarqueeComponent,
     ReticleComponent,
     NavMenuComponent,
-    NavMenuItemComponent
+    NavMenuItemComponent,
+    LoadingPanelComponent,
+    RouterPanelComponent
   ]
 })
 export class GymcrashComponentsModule { }
