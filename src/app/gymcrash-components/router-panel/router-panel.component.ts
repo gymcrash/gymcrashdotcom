@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { ActivationStart, NavigationStart, Router } from '@angular/router';
 import { take, timer } from 'rxjs';
 
 @Component({
@@ -11,23 +11,41 @@ export class RouterPanelComponent implements OnInit {
 
   @Input() minimumLoadingTime: number = 1000;
   showLoading: boolean = false;
+  title: string = "";
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {    
+    this.initRouterPanelLoading();
+  }
+
+  ngOnInit(): void {
+
+    
+  }
+  
+  
+  private initRouterPanelLoading() {
     this.router.events.subscribe({
-      next: (e)=> {
-        if(e instanceof NavigationStart) {
-          this.showLoading = true;
-          timer(this.minimumLoadingTime).pipe(take(1)).subscribe({
-            next: ()=> {
-              this.showLoading = false;
-            }
-          });
+      next: (e) => {
+        if (e instanceof NavigationStart) {
+          this.showLoadingScreen();
+        }
+        if (e instanceof ActivationStart) {
+          this.extractRouteTitle(e);
         }
       }
     });
   }
 
-  ngOnInit(): void {
+  private extractRouteTitle(e: ActivationStart) {
+    this.title = e.snapshot.data["title"] || "";
   }
 
+  private showLoadingScreen() {
+    this.showLoading = true;
+    timer(this.minimumLoadingTime).pipe(take(1)).subscribe({
+      next: () => {
+        this.showLoading = false;
+      }
+    });
+  }
 }

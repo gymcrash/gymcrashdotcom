@@ -1,0 +1,72 @@
+@import "../styles/colors.scss";
+
+.container {
+    border: 3px solid rgba($orange, 0.5);
+    border-radius: 10px;
+    margin: 0 2em;
+    perspective: 100px;
+    position: relative;
+}
+
+.title {
+    border-bottom: 3px dotted rgba($orange, 0.5);
+    color: $orange;
+    text-shadow: none;
+    padding: 0.5em;
+}
+
+.content {
+
+    position: relative;
+}
+
+.loadingContainer {
+    align-items: center;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 0;
+    width: 100%;
+    z-index: 99;
+}
+
+@keyframes textZoom {
+    0% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(120%);
+    }
+}
+
+.loadingContent {
+    animation: textZoom 1s linear 0s infinite forwards;
+    color: $red;
+    text-shadow: 2px 2px 2px $red;
+    font-size: 5em;
+}
+
+@keyframes scrollingDivider {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
+}
+
+.loadingDivider {
+    animation: scrollingDivider 1s linear 0s infinite alternate;
+    background-image: repeating-linear-gradient(-45deg, $red, $red 20px, transparent 21px, transparent 40px);
+    text-shadow: 2px 2px 2px $red;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+.loadingSmallText {
+    background-color: rgba($background, 0.7);
+    color: $red;
+    padding: 0 1em;
+}

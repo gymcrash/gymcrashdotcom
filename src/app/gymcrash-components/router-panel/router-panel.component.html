@@ -1,5 +1,13 @@
 <div class="container">
-    <div *ngIf="showLoading">LOADINGS!</div>
-    <router-outlet>
-    </router-outlet>
+    <h2 class="title" >{{title}}</h2>
+    <div class="content">    
+            <router-outlet *ngIf="!showLoading">
+            </router-outlet>
+    </div>
+    <div *ngIf="showLoading" class="loadingContainer">
+        <div class="loadingDivider"><span class="loadingSmallText">INCOMING DATA</span></div>
+        <div class="loadingContent">LOADING</div>
+        <div class="loadingDivider"><span class="loadingSmallText">COMPUTING VISUAL DISPLAY</span></div>
+    </div>
+
 </div>
