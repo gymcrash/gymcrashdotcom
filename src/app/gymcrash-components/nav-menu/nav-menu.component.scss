@@ -7,8 +7,10 @@
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 2em 0;
+    overflow: hidden;
     position: relative;
 }
 
@@ -31,6 +33,7 @@ nav {
     left: 1em;
     height: 3em;
     width: 3em;
+    z-index: -1;
 }
 
 .starter2 {

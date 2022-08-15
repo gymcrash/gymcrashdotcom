@@ -32,6 +32,12 @@
     animation: scroll 5s linear 2.5s infinite forwards;
 }
 
+@media screen and (max-width: 800px) {
+    .text2 {
+        display: none;
+    }
+}
+
 span {
 
     display: block;
